@@ -35,7 +35,7 @@ puts greetings1.reverse
 print "================================================\n"
 
 #Pushing value in array
-greetings<<"konnichiwa"
+greetings << "konnichiwa"
 puts greetings
 print "================================================\n"
 
@@ -44,9 +44,17 @@ puts greetings1
 print "================================================\n"
 
 #Filtering elemnet in array
-puts greetings.select { |i| i.length>5}
+puts greetings.select { |i| i.length > 5}
 print "================================================\n"
 
 #.. method
 digit = Array(0..9)
 puts "#{digit}"
+print "================================================\n"
+
+
+#Collecting Array data with index numbers
+numbers = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"]
+numbers.collect.with_index do | number, index |
+    puts "#{index+1}: #{number}"
+end
