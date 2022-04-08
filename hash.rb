@@ -58,4 +58,13 @@ print "================================================\n\n"
 #To print the only key from hash
 puts restaurant_menu.keys
 print "********************************\n"
+#To print the only value from hash
 puts restaurant_menu.values
+
+#Ruby also has the ability to make the hash table using different methods
+#Just like the array but with the prceeding word of Hash and instead of = we place ,
+cards = Hash[:clubs,'♣', :diamonds,'♦', :hearts,'♥', :spades,'♠']
+puts cards
+printf "\n"
+puts cards.values
+puts cards.keys
