@@ -7,3 +7,9 @@ floatVar = "#{25.5} - I'm a Float variables"           #Float Vairables
 puts greetings
 puts intVar
 puts floatVar
+
+print "=================================\n"
+
+puts greetings = "Hello".class       #Strings Variables
+puts intVar1 = 255.class           #Integer Variables
+puts floatVar1 = 25.5.class           #Float Vairables
