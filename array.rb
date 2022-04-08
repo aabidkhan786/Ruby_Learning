@@ -41,3 +41,12 @@ print "================================================\n"
 
 greetings1.push("konnichiwa")
 puts greetings1
+print "================================================\n"
+
+#Filtering elemnet in array
+puts greetings.select { |i| i.length>5}
+print "================================================\n"
+
+#.. method
+digit = Array(0..9)
+puts "#{digit}"
