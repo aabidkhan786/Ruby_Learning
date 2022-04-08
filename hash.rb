@@ -48,8 +48,14 @@ restaurant_menu.each do | item, price |
 end
 
 print "********************************\n"
-puts "Price of menu before discounts."
+puts "Price of menu after discounts."
 restaurant_menu.each do | item, price |
     price = price - price * 10/100
     puts "#{item} : ₹#{price}"
 end
+
+print "================================================\n\n"
+#To print the only key from hash
+puts restaurant_menu.keys
+print "********************************\n"
+puts restaurant_menu.values
