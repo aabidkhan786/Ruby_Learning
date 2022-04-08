@@ -31,4 +31,25 @@ print "================================================\n"
 greetings.each do | lang, greet |
     puts "#{lang} : #{greet}"
 end
-print "================================================\n"
+print "================================================\n\n"
+
+#Some arithemtic operations in Hash Data
+restaurant_menu = {
+    "Dal Makhni" => 120,
+    "Rice" => 75,
+    "Water Bottle" => 20,
+    "Butter Chicken" => 220,
+    "Mutton Kabab" => 250
+}
+
+puts "Price of menu before discounts."
+restaurant_menu.each do | item, price |
+    puts "#{item} : ₹#{price}"
+end
+
+print "********************************\n"
+puts "Price of menu before discounts."
+restaurant_menu.each do | item, price |
+    price = price - price * 10/100
+    puts "#{item} : ₹#{price}"
+end
