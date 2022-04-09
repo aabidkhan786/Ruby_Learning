@@ -58,3 +58,12 @@ numbers = ["One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten"]
 numbers.collect.with_index do | number, index |
     puts "#{index+1}: #{number}"
 end
+print "================================================\n"
+
+#Using with_index method in an array
+words = ["one", "two", "three", "four", "five"]
+new_words = words.select.with_index do |number,ind|
+    ind.even?
+end
+puts new_words
+puts new_words.capitalize
