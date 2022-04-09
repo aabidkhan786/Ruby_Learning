@@ -52,3 +52,19 @@ def div_two(num1=0,num2=0)
 end
 puts display_message("The division of ",div_two(5,7))
 printf "====================================\n"
+
+#Arraying the arguments
+#Using the * - splat operator : splat operator convert the array into parameter list
+puts "Using the spat operator we display the message"
+def adds(*number)
+    number.inject(0) { |sum,number| sum + number }
+end
+
+puts display_message("The sum is : ",adds(1,5,69,78,51,26,45))
+printf "**************************************\n"
+
+def muls(*number)
+    number.inject(1) { |mul,number| mul * number }
+end
+
+puts display_message("The multiplication is : ",muls(1,5,69,78,51,26,45))
