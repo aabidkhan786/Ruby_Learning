@@ -105,4 +105,34 @@ def batman_ironman_lambda
     "Iron Man will win!"
 end
 puts batman_ironman_lambda
+print "\n==================================================\n"
 
+=begin
+    A block is just a bit of code between do..end or {}. It’s not an object on its own, but it can be passed to methods like .each or .select.
+
+    A proc is a saved block we can use over and over.
+
+    A lambda is just like a proc, only it cares about the number of arguments it gets and it returns to its calling method rather than returning immediately.
+=end
+
+#Lambda to check the hash value if it less than letter "M"
+crew = {
+  captain: "Picard",
+  first_officer: "Riker",
+  lt_cdr: "Data",
+  lt: "Worf",
+  ensign: "Ro",
+  counselor: "Troi",
+  chief_engineer: "LaForge",
+  doctor: "Crusher"
+}
+
+first_half = lambda { |key, value| value[0] < "M" }
+print crew.collect\(&first_half)
+# The above output will be: [false, false, true, false, false, false, true, true]
+
+a_to_m = crew.select(&first_half)
+puts a_to_m
+#The above output will be: {:lt_cdr=>"Data", :chief_engineer=>"LaForge", :doctor=>"Crusher"}
+
+#The difference between .collect and .select is : .collect return boolean value and .select return the key value pairs.
