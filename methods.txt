@@ -36,3 +36,9 @@ For example, text.split(",") : tells Ruby to split up the string text whenever i
 .each_key : We use it in the hash, as the name suggest what it does.
 .each_value : We use it in the hash, as the name suggest what is does.
 
+.push : We us the push method to add the element into the existing array.
+We also have the shovel operator (<<) to add the elements.
+ex:         [1, 2, 3] << 4
+            # ==> [1, 2, 3, 4]
+
+
