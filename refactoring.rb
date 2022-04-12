@@ -18,3 +18,22 @@ case greeting
 end
 print "==========================================\n"
 
+#Condtional Assignement
+#       (||=) Conditional Assignment Operator   :   It is used to assign value to the   variable if it hasn't been already.
+
+
+#Refactoring Case Statement
+puts "What's your favorite language?"
+language = gets.chomp
+
+case language
+when "Ruby" then puts "Ruby is great for web apps!"
+when "Python" then puts "Python is great for science."
+when "Javascript" then puts "Javascript makes website awesome."
+when "HTML" then puts "HTML is what websites are made of!"
+when "CSS" then puts "CSS makes website pretty."
+else puts "I don't know that language!'"
+end
+print "==========================================\n"
+
+
