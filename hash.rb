@@ -68,3 +68,90 @@ puts cards
 printf "\n"
 puts cards.values
 puts cards.keys
+
+print "===============================================\n\n"
+#find out the no of the times words has been repeated
+puts "Enter the text: "
+text = gets.chomp
+
+words = text.split
+
+frequencies = Hash.new(0)
+
+words.each { |word| frequencies[word] += 1 }
+
+frequencies = frequencies.sort_by do |word,count|
+  count
+end
+
+frequencies.reverse!
+
+frequencies.each do |key,value|
+  puts "#{key} -> #{value}"
+end
+
+print "==============================================\n\n"
+
+#Converting the given string into symbols for Hash
+strings = ["HTML", "CSS", "JavaScript", "Python", "Ruby"]
+symbols = []
+
+strings.each do |s| 
+ symbols.push(s.intern)
+end 
+print symbols
+print "==============================================\n\n"
+
+#An Exmple of Movie and It's rating
+movies = {
+  Memento: 3,
+  Primer: 4,
+  Ishtar: 1
+}
+
+puts "What would you like to do?"
+puts "-- Type 'add' to add a movie."
+puts "-- Type 'update' to update a movie."
+puts "-- Type 'display' to display all movies."
+puts "-- Type 'delete' to delete a movie."
+
+choice = gets.chomp.downcase
+case choice
+when 'add'
+  puts "What movie do you want to add?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "What's the rating? (Type a number 0 to 4.)"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title} has been added with a rating of #{rating}."
+  else
+    puts "That movie already exists! Its rating is #{movies[title.to_sym]}."
+  end
+when 'update'
+  puts "What movie do you want to update?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "Movie not found!"
+  else
+    puts "What's the new rating? (Type a number 0 to 4.)"
+    rating = gets.chomp
+    movies[title.to_sym] = rating.to_i
+    puts "#{title} has been updated with new rating of #{rating}."
+  end
+when 'display'
+  movies.each do |movie, rating|
+    puts "#{movie}: #{rating}"
+  end
+when 'delete'
+  puts "What movie do you want to delete?"
+  title = gets.chomp
+  if movies[title.to_sym].nil?
+    puts "Movie not found!"
+  else
+    movies.delete(title.to_sym)
+    puts "#{title} has been removed."
+  end
+else
+  puts "Sorry, I didn't understand you."
+end
