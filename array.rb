@@ -6,7 +6,7 @@ puts greetings
 
 print "================================================\n"
 
-#Second Way
+#Second Way : And this basically used to tell ruby that you want to create an array but don't specified the data.
 greetings1 = Array.new(["Hello", 'Holla', "Bonjour","Guten tag","salve","ola","Assalam Alaikum","Namaste"])
 
 puts greetings1
@@ -66,4 +66,17 @@ new_words = words.select.with_index do |number,ind|
     ind.even?
 end
 puts new_words
-puts new_words.capitalize
+# puts words.upcase 
+print "================================================\n"
+
+#Sorting of array in Ascending and Descending Order
+books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
+
+# To sort our books in ascending order, in-place
+#   <=> : it is called as comparison operator
+puts books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+
+printf "***********************888\n"
+
+# Sort your books in descending order, in-place below
+puts books.sort! { |firstbook,secondbook| secondbook <=> firstbook }
