@@ -52,3 +52,57 @@ puts can_ride_1
 puts can_ride_2
 puts can_ride_3
 print "==================================================\n"
+
+#Working with the yield and Procs
+def greeter
+    yield
+end
+
+phrase = Proc.new { puts "Hello there!" }
+greeter(&phrase)
+print "==================================================\n"
+
+
+#Converting numbers into string
+numbers_array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+strings_array = numbers_array.collect(&:to_s)
+
+puts numbers_array
+puts "********************************"
+puts strings_array
+print "==================================================\n"
+
+=begin
+Like procs, lambdas are objects. The similarities don’t stop there: with the exception of a bit of syntax and a few behavioral quirks, lambdas are identical to procs.
+
+Lambda Syntax
+lambda { |param| block }
+=end
+
+#Converting the strings into symbol by using the lambda
+strings = ["leonardo", "donatello", "raphael", "michaelangelo"]
+# Write your code below this line!
+symbolize = lambda { |strings| strings.to_sym }
+
+# Write your code above this line!
+symbols = strings.collect(&symbolize)
+print symbols
+print "\n==================================================\n"
+
+#Now below we have the difference between lambda and procs
+def batman_ironman_proc
+    victor = Proc.new { return "Batman will win!" }
+    victor.call
+    "Iron Man will win!"
+end
+puts batman_ironman_proc
+print "******************************\n"
+  
+def batman_ironman_lambda
+    victor = lambda { return "Batman will win!" }
+    victor.call
+    "Iron Man will win!"
+end
+puts batman_ironman_lambda
+
