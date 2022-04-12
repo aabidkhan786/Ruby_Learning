@@ -41,4 +41,8 @@ We also have the shovel operator (<<) to add the elements.
 ex:         [1, 2, 3] << 4
             # ==> [1, 2, 3, 4]
 
+.collect : The collect method takes a block and applies the expression in the block to every element in an array.
+
+.collect! : .collect returns a copy of my_nums, but doesn’t change (or mutate) the original my_nums array. If we want to do that, we can use .collect! with an exclamation point.
+
 
