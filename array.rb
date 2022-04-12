@@ -76,7 +76,17 @@ books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brie
 #   <=> : it is called as comparison operator
 puts books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
 
-printf "***********************888\n"
+printf "****************************\n"
 
-# Sort your books in descending order, in-place below
+# Sort your books in descending order.
 puts books.sort! { |firstbook,secondbook| secondbook <=> firstbook }
+print "================================================\n"
+
+#Collecting out only integer value - using block method
+odds_n_ends = [:weezard, 42, "Trady Blix", 3, true, 19, 12.345]
+
+int = odds_n_ends.select do |integer|
+  integer.is_a?(Integer)
+end
+
+puts int
