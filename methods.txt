@@ -45,4 +45,7 @@ ex:         [1, 2, 3] << 4
 
 .collect! : .collect returns a copy of my_nums, but doesn’t change (or mutate) the original my_nums array. If we want to do that, we can use .collect! with an exclamation point.
 
+.call : The method is used to call the procs directly
+#           hi = Proc.new { puts "Hello!" }
+#           hi.call
 
