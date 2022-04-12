@@ -68,3 +68,28 @@ def muls(*number)
 end
 
 puts display_message("The multiplication is : ",muls(1,5,69,78,51,26,45))
+
+#Now we have the another way of making method without the name and that is called as lambda
+
+hello = lambda { |message| "Hello, #{message}" }
+puts hello.call("Aabid")
+printf "====================================\n"
+
+#Writing a method ascend and descend the given array
+def alphabetize(arr,rev=false)
+    arr.sort!
+    if rev
+      arr.reverse!
+    else
+      return arr
+    end
+end
+numbers = ["Recall that hashes are collections of","key-value pairs, where a unique","key is associated with some value. For example:"]
+puts alphabetize(numbers,rev=true)
+printf "******************************\n"
+puts alphabetize(numbers)
+printf "====================================\n"
+numbers = [120,84,1,0,88,56,78,23,784,1000]
+puts alphabetize(numbers,rev=true)
+printf "******************************\n"
+puts alphabetize(numbers)
