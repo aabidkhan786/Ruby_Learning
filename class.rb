@@ -54,3 +54,25 @@ puts calculation.addition(7500,6235)
 puts calculation.subtraction(21000,11026)
 puts calculation.multiplication(4255,6)
 puts calculation.division(25000,13)
+
+#=========================================================
+#Public and Private in Class
+class Dog
+    def initialize(name, breed)
+      @name = name
+      @breed = breed
+    end
+    
+    #this is the way to declare public method in class
+    public
+    def bark
+      puts "Woof!"
+    end
+
+    #This is the way to declare private method in class
+    private
+    def id
+        @id_number = 12345
+    end
+
+end
